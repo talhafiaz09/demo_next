@@ -11,7 +11,6 @@ import Paper from "@mui/material/Paper";
 
 export const getServerSideProps = async () => {
     const result = await axios.post("http://localhost:3000/api/movies", { page: 1 });
-    console.log(result);
     return {
         props: { data: result.data },
     };
